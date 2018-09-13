@@ -8,6 +8,7 @@
  * isObject(null); // false
  */
 const isObject = data => {
+  return toString.call(date) == toString.call({});
   /* your logic here...*/
 };
 

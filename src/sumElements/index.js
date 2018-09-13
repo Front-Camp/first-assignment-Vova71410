@@ -10,8 +10,29 @@
  * sumElements(['1', 'hi', 3]);     // 4
  * sumElements([Infinity, NaN, 1]); // 1
  */
+function isNumber(arr){
+  let result = arr.map(function(n){
+    let temp = n;
+	if(isFinite(temp)){
+      temp=+temp;
+       if(typeof temp == "number"){
+        return temp;
+      }
+    }
+    else if(typeof temp == "string" && !isNaN(+temp))
+    {
+      return parseInt(temp);
+    }else return 0;
+	
+   });
+
+   return result;
+ }
+
 const sumElements = arr => {
-  /* your logic here...*/
+  return  isNumber(arr).reduce(function(sum, current) {
+    return sum + current;
+  }, 0);
 };
 
 export default sumElements;

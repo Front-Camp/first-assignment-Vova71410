@@ -1,3 +1,5 @@
+import { isString } from "util";
+
 /**
  * This function should just reverse string
  *
@@ -9,6 +11,18 @@
  */
 const turnMeBaby = str => {
   /* your logic here...*/
+  let temp;
+  if(typeof str !== "string"){
+    return false;
+  }
+
+  temp = str.split(" ").reverse();
+
+  return temp.map( item =>{
+    item.split("").reverse().join("");
+  });
+
+
 };
 
 export default turnMeBaby;

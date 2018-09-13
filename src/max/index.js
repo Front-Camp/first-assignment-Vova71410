@@ -6,8 +6,17 @@
 * max([1, 2, 4]); // 4
 * max([-1, 0]);   // 0
 */
-const max = arr => {
+function isNumber(arr){
+  return arr.every (element => {
+    return !isNaN(parseFloat(n)) && isFinite(n) && typeof n !== 'string';
+  });
+
+}
+const max = arr =>{
   /* your logic here...*/
+ return isNumber(arr) ?  Math.max.apply(null,arr): false;
+ 
+
 };
 
 export default max;

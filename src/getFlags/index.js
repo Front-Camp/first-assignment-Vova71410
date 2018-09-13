@@ -7,6 +7,9 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  arr.reduce((concatArr,item)=>{
+    return concatArr.concat(item.flags);
+    },[]);
 };
 
 export default getFlags;

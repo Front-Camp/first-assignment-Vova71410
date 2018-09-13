@@ -9,8 +9,13 @@
 * sum(0, 5);   // 5
 * sum(-1, 13); // 12
 */
-const sum = (a, b) => {
+function isNumber(n){
+  return !isNaN(parseFloat(n)) && isFinite(n) && typeof n !== 'string';
+}
+var sum = (a, b) => {
   /* your logic here...*/
+  return isNumber(a) && isNumber(b) ?  a + b: false;
+  
 };
 
 export default sum;
